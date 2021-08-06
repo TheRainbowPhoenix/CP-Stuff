@@ -30,7 +30,65 @@ header = f.read(5396*2)
 spinner = f.read(3360*2)
 
 # data = f.read()
-f.close()
 
 # show_part(header)
-show_part(spinner, 60)
+# show_part(spinner, 60)
+
+pad = f.read(88 * 2)
+
+button_system = f.read(159*16*4 *2)
+# show_part(button_system, 159)
+
+_ = f.read(160 * 2)
+
+button_system_click = f.read(159*16*4 *2)
+# show_part(button_system_click, 159)
+
+
+_ = f.read(160 * 2)
+
+button_com = f.read(159*16*4 *2)
+# show_part(button_com, 159)
+
+_ = f.read(160 * 2)
+
+button_com_click = f.read(159*16*4 *2)
+# show_part(button_com_click, 159)
+
+_ = f.read(160 * 2)
+
+button_prog = f.read(159*16*4 *2)
+# show_part(button_prog, 159)
+
+_ = f.read(160 * 2)
+
+button_prog_click = f.read(159*16*4 *2)
+# show_part(button_prog_click, 159)
+
+
+_ = f.read(160 * 2)
+
+button_fin = f.read(159*16*4 *2)
+# show_part(button_fin, 159)
+
+_ = f.read(160 * 2)
+
+button_fin_click = f.read(159*16*4 *2)
+# show_part(button_fin_click, 159)
+
+
+
+_ = f.read(160 * 2)
+
+button_seq = f.read(159*16*4 *2)
+show_part(button_seq, 159)
+
+_ = f.read(160 * 2)
+
+button_seq_click = f.read(159*16*4 *2)
+show_part(button_seq_click, 159)
+
+
+# Close
+
+f.close()

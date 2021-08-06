@@ -46,6 +46,8 @@ f = open("win/exe_parts/.rdata", "rb")
 
 header = f.read(5396 * 2)
 spinner = f.read(3360 * 2)
+pad = f.read(88 * 2)
+
 
 print(len(spinner))
 
