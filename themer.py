@@ -47,6 +47,10 @@ f = open("win/exe_parts/.rdata", "rb")
 header = f.read(5396 * 2)
 spinner = f.read(3360 * 2)
 
+print(len(spinner))
+
+end = f.read()
+
 # data = f.read()
 f.close()
 
@@ -55,3 +59,25 @@ img = from_part(spinner, 60)
 out = to_part(img)
 
 assert out == spinner
+
+# Theme reading
+
+def get_pixels(path):
+    return Image.open(path).convert("RGB")
+
+f = open("rdata/new.rdata", "wb+")
+
+f.write(header)
+
+spinner = get_pixels("rdata/spinner.png")
+
+spinner_part = to_part(spinner)
+
+print(len(spinner_part))
+
+f.write(spinner_part)
+f.write(end)
+
+print("OK")
+
+f.close()
