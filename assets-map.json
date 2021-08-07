@@ -581,20 +581,5 @@
     "size": 10335,
     "export": true,
     "width": 159
-  },{
-    "name": "test",
-    "size": 100800,
-    "export": true,
-    "width": 50
-  },{
-    "name": "test-1",
-    "size": 100800,
-    "export": true,
-    "width": 50
-  },{
-    "name": "test-2",
-    "size": 200800,
-    "export": true,
-    "width": 100
   }
 ]
