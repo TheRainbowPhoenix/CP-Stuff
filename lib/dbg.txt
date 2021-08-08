@@ -1,0 +1,2 @@
+"C:\Windows\SysWOW64\rundll32.exe" "D:\progs\classpad\lib\OSupdateDLL.dll", OSUpdate
+

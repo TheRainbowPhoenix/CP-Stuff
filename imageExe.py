@@ -1,11 +1,15 @@
 from PIL import Image
 import numpy as np
-f = open("win/exe_parts/.rdata", "rb")
+f = open("lib/out-3069.bin", "rb")
 l = f.read()
 f.close()
 
 MASK5 = 0b011111
 MASK6 = 0b111111
+
+while len(l)%32 != 0:
+    l += b'\x00'
+
 
 im = np.frombuffer(l, dtype=np.uint16)
 b = (im & MASK5) << 3
@@ -16,7 +20,7 @@ rgb = np.dstack((r,g,b)).astype(np.uint8)
 
 
 mode = 'RGB'
-xdim = 640
+xdim = 320
 ydim = len(rgb[0]) // xdim
 
 image = Image.frombytes('RGB', (xdim, ydim), rgb, 'raw')
