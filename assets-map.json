@@ -577,6 +577,7 @@
   }, {
     "size": 1
   }, {
+    "_size": "159 * 65",
     "name": "button_algy_click",
     "size": 10335,
     "export": true,

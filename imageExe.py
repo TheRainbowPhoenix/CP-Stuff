@@ -1,6 +1,6 @@
 from PIL import Image
 import numpy as np
-f = open("lib/out-3069.bin", "rb")
+f = open("win/ClassPadManagerSubscriptionForClassPadII.exe.bin", "rb")
 l = f.read()
 f.close()
 
@@ -20,7 +20,7 @@ rgb = np.dstack((r,g,b)).astype(np.uint8)
 
 
 mode = 'RGB'
-xdim = 320
+xdim = 640
 ydim = len(rgb[0]) // xdim
 
 image = Image.frombytes('RGB', (xdim, ydim), rgb, 'raw')

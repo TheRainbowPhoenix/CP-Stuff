@@ -44,10 +44,12 @@ def inflate(data):
     return inflated
 
 
+PREFIX = "VERSIONS\\02.00.3000.0000\\"
+
 def process():
     head = b'\x1F\x8B\x08\x00\x00\x00\x00\x00\x04\x00'
 
-    f = open("RCData3070.bin", "rb")
+    f = open(PREFIX + "RCData3070.bin", "rb")
     l = f.read(0x2FF6)
 
     file = head + l
@@ -58,17 +60,17 @@ def process():
 
     f.close()
 
-    with open('out.gz', 'wb+') as out:
+    with open(PREFIX + 'out.gz', 'wb+') as out:
         out.write(file)
 
     data = inflate(file)
 
-    with open('out.bin', 'wb+') as out:
+    with open(PREFIX + 'out.bin', 'wb+') as out:
         out.write(data)
 
     # Part 2
 
-    f = open("RCData3069.bin", "rb")
+    f = open(PREFIX + "RCData3069.bin", "rb")
     l = f.read(0x2FF6)
 
     file = head + l
@@ -79,12 +81,12 @@ def process():
 
     f.close()
 
-    with open('out-3069.gz', 'wb+') as out:
+    with open(PREFIX + 'out-3069.gz', 'wb+') as out:
         out.write(file)
 
     data = inflate(file)
 
-    with open('out-3069.bin', 'wb+') as out:
+    with open(PREFIX + 'out-3069.bin', 'wb+') as out:
         out.write(data)
 
 if __name__ == '__main__':
