@@ -1,0 +1,19 @@
+IDA : .text:008D1000
+
+Cutter : 0x00401000
+
+0000000000E4F0ED	ClassPadManagerSubscriptionForClassPadII.exe	j_mfc100_6601+0x15D2D
+
+
+x86dbg : .text starts 0xdd1000
+IDA    : .text starts 0x8d1000
+Cutter : .text starts 0x401000
+
+
+x86dbg : .rdata starts 0x174c000
+IDA    : .rdata starts 0xF7D23C
+Cutter : .rdata starts 0xaac000
+
+
+
+convert : hex((0x408bcb - 0x401000) + 0xdd1000)
