@@ -1,0 +1,10 @@
+fnc map :
+
+fcn.100028b5 = fcn.100023a5
+
+diff : +1296
+
+added functions :
+fcn.10006620
+fcn.100065d0
+fcn.100065a0

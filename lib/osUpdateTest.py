@@ -1,5 +1,6 @@
 import sys, ctypes, platform, os
 
+
 if platform.system().lower() == 'windows':
     import os.path
 
@@ -18,8 +19,10 @@ if platform.system().lower() == 'windows':
         fx_aspi_lib = ctypes.windll.LoadLibrary(dll_name)
         fx_aspi_dll = ctypes.WinDLL(dll_name, winmode=0)
 
-        init = fx_aspi_lib.OSUpdate("0", "0")
-        assert init == 1
+        # OSUpdate(local_number4, 0, local_string2); // dll: OSUpdateDll.dll
+
+        init = fx_aspi_lib.OSUpdate(0, 0, "D:\\progs\\classpad\\lib\\")
+        # assert init == 1
 
         print(init)
 
