@@ -1,0 +1,51 @@
+{
+  "name": "Core Loader",
+  "author": "SnailMath, CPDev",
+  "description": "Allows an file `run.bin` to be loaded from flash into RAM, and executed using the System > Set Imaginary Unit menu",
+  "version": "02.01.2000",
+  "patches": [{
+    "rom_address":  "0x80128018",
+    "_comment":     "Base loader (sh4 asm)",
+    "hex":          "2f864f22d15292a561113210892cd24be401420be501d24ac74f6403420be500d246e401420be502d245c7506403420be500d242e401420be503d241c7516403420be500d23de401420be505d23cc7526403420be500d23b420b0009d23a420b0009d23a422b0009d234e401420be505d233c72e6403420be500d232c72b6403e505d01b400b000968036403c71f6503d01b400b00096483d51ad016400b00096403c71c6503d016400b00096483d5155651d011400b00096403c7186503d010400b00096483d00d400b00096403c7156503d00b400b0009d00a400b00094f26000b68f6000900090009000900090009800578548005798e800578a280057912800659988cfe0000000000ff6f70656e0000000966737461740000097265616400000009636c6f73650000095c666c73305c72756e2e62696e0000098002e4308002da0c8003733e80094380800000008c04f5fa5acb0009596f752063616e206e6f74207573652074686500686f6c6c79686f636b2d32206c61756e6368657200000009647572696e67206578616d206d6f646521000009507265737320436c65617220746f207265626f6f742e0000"
+  }, {
+    "rom_address":  "0x808B5CD8",
+    "_comment":     "",
+    "hex":          "486f6c6c79686f636b2d32204c61756e6368657200"
+  }, {
+    "rom_address":  "0x808BB211",
+    "_comment":     "",
+    "hex":          "283370696e206361626c65290d2d486f6c6c79686f636b204c61756e6368657200"
+  }, {
+    "rom_address":  "0x808C5460",
+    "_comment":     "",
+    "hex":          "486f6c6c79686f636b2d32204c61756e6368657200"
+  }, {
+    "rom_address":  "0x808CB1E4",
+    "_comment":     "",
+    "hex":          "2d486f6c6c79686f636b204c61756e6368657200"
+  }, {
+    "rom_address":  "0x808D65C0",
+    "_comment":     "",
+    "hex":          "486f6c6c79686f636b2d32204c61756e6368657200"
+  }, {
+    "rom_address":  "0x808DC202",
+    "_comment":     "",
+    "hex":          "2d486f6c6c79686f636b204c61756e6368657200"
+  }, {
+    "rom_address":  "0x808E7054",
+    "_comment":     "",
+    "hex":          "486f6c6c79686f636b2d32204c61756e6368657200"
+  }, {
+    "rom_address":  "0x808ECC6B",
+    "_comment":     "",
+    "hex":          "2d486f6c6c79686f636b204c61756e6368657200"
+  }, {
+    "rom_address":  "0x808F5F90",
+    "_comment":     "",
+    "hex":          "486f6c6c79686f636b2d32204c61756e6368657200"
+  }, {
+    "rom_address":  "0x808FB57A",
+    "_comment":     "",
+    "hex":          "2d486f6c6c79686f636b204c61756e6368657200"
+  }]
+}
